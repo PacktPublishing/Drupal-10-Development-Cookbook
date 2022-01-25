@@ -1,0 +1,8 @@
+{
+    "name": "drupal/mymodule",
+    "type": "drupal-module",
+    "description": "This is an example module from the Drupal Development Cookbook!",
+    "require": {
+        "drupal/core": ">=10"
+    }
+}

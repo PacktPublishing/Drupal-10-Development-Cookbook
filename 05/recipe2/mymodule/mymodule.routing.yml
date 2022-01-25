@@ -1,0 +1,12 @@
+mymodule.hello_world:
+  path: /hello-world/{user}
+  defaults:
+    _controller: Drupal\mymodule\Controller\HelloWorldController::page
+    _title: 'Hello world!'
+  requirements:
+    user: '\d+'
+    _entity_access: 'user.view'
+  options:
+    parameters:
+      user:
+        type: 'entity:user'

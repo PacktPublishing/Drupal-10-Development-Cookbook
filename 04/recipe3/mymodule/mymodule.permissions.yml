@@ -1,0 +1,3 @@
+can promote nodes:
+  title: 'Can promote content'
+  description: 'Determines if the user can change promotion fields on content.'

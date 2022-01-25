@@ -1,0 +1,6 @@
+mymodule.user_redirect:
+  path: /user-redirect
+  defaults:
+    _controller: Drupal\mymodule\Controller\RedirectController::page
+  requirements:
+    _access: 'TRUE'

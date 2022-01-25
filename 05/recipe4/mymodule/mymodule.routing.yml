@@ -1,0 +1,6 @@
+mymodule.site_info:
+  path: /site-info
+  defaults:
+    _controller: Drupal\mymodule\Controller\SiteInfoController::page
+  requirements:
+    _access: 'TRUE'

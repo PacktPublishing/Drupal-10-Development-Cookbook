@@ -1,0 +1,5 @@
+services:
+  mymodule.commands:
+    class: \Drupal\mymodule\Commands\MymoduleCommands
+    tags:
+      - { name: drush.command }

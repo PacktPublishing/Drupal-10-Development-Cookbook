@@ -1,0 +1,14 @@
+<?php
+
+function mymodule_entity_field_access(
+  $operation,
+  \Drupal\Core\Field\FieldDefinitionInterface $field_definition,
+  \Drupal\Core\Session\AccountInterface $account
+) {
+  $field_name = $field_definition->getName();
+  if ($field_name === 'promote' || $field_name === 'sticky') {
+    $can_promote_nodes = $account->hasPermission('can promote nodes');
+    return Drupal\Core\Access\AccessResult::allowedIf($can_promote_nodes);
+  }
+  return \Drupal\Core\Access\AccessResult::neutral();
+}

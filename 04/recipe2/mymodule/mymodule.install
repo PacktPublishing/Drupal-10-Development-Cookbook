@@ -1,0 +1,12 @@
+<?php
+
+/**
+* Implements hook_install().
+*/
+function mymodule_install() {
+  // Set the site name.
+  \Drupal::configFactory()
+    ->getEditable('system.site')
+    ->set('name', 'Drupal Development Cookbook!')
+    ->save();
+}

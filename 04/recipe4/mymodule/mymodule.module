@@ -1,0 +1,53 @@
+<?php
+
+function mymodule_node_insert(\Drupal\node\NodeInterface $node) {
+  if ($node->isPublished()) {
+    $site_mail = \Drupal::config('system.site')->get('mail');
+    /** @var \Drupal\Core\Mail\MailManager $mail_service */
+    $mail_service = \Drupal::service('plugin.manager.mail');
+    $mail_service->mail(
+      module: 'mymodule',
+      key: 'node_published_insert',
+      to: $site_mail,
+      langcode: 'en',
+      params: ['node' => $node],
+    );
+  }
+}
+
+function mymodule_node_update(\Drupal\node\NodeInterface $node) {
+  if ($node->isPublished()) {
+    /** @var \Drupal\node\NodeInterface $original */
+    $original = $node->original;
+    if (!$original->isPublished()) {
+      $site_mail = \Drupal::config('system.site')->get('mail');
+      /** @var \Drupal\Core\Mail\MailManager $mail_service */
+      $mail_service = \Drupal::service('plugin.manager.mail');
+      $mail_service->mail(
+        module: 'mymodule',
+        key: 'node_published_update',
+        to: $site_mail,
+        langcode: 'en',
+        params: ['node' => $node],
+      );
+    }
+  }
+}
+
+function mymodule_mail($key, array &$message, $params) {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $params['node'];
+  if ($key === 'node_published_insert') {
+    $message['subject'] = 'Newly published node: ' . $node->label();
+  }
+  elseif ($key === 'node_published_update') {
+    $message['subject'] = 'Existing node published: ' . $node->label();
+  }
+  else {
+    // Unknown key.
+    return;
+  }
+  $message['body'][] = 'The following node has been published:';
+  $message['body'][] = $node->label();
+  $message['body'][] = $node->toUrl()->setAbsolute()->toString();
+}
