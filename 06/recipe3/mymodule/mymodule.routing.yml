@@ -1,0 +1,20 @@
+mymodule.create_article:
+  path: /articles
+  defaults:
+    _controller: Drupal\mymodule\Controller\ArticleController::store
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+mymodule.get_articles:
+  path: /articles
+  defaults:
+    _controller: Drupal\mymodule\Controller\ArticleController::index
+  methods: [GET]
+  requirements:
+    _permission: 'access content'
+mymodule.get_article:
+  path: /articles/{node}
+  defaults:
+    _controller: Drupal\mymodule\Controller\ArticleController::get
+  requirements:
+    _permission: 'access content'

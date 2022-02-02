@@ -1,0 +1,8 @@
+POST http://localhost/articles
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "New article",
+  "body": "Test body"
+}

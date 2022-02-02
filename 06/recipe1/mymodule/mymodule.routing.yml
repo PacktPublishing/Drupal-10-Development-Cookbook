@@ -1,0 +1,7 @@
+mymodule.create_article:
+  path: /articles
+  defaults:
+    _controller: Drupal\mymodule\Controller\ArticleController::store
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'

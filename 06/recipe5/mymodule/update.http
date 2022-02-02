@@ -1,0 +1,8 @@
+PATCH http://localhost/articles/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "New updated title!",
+  "body": "Modified body text"
+}
