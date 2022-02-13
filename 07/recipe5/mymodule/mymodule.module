@@ -1,0 +1,18 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+function mymodule_form_system_site_information_settings_alter(array &$form, FormStateInterface $form_state) {
+  $form['site_information']['site_phone'] = [
+    '#type' => 'tel',
+    '#title' => 'Site phone',
+    '#default_value' => \Drupal::config('system.site')->get('phone'),
+  ];
+
+  $form['#submit'][] = 'mymodule_system_site_information_phone_submit';
+}
+
+function mymodule_system_site_information_phone_submit(array &$form, FormStateInterface $form_state) {
+  $config = Drupal::configFactory()->getEditable('system.site');
+  $config ->set('phone', $form_state->getValue('site_phone'));
+}

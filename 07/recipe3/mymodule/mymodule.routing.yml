@@ -1,0 +1,7 @@
+mymodule.approval_form:
+  path: /approval-form
+  defaults:
+    _form: Drupal\mymodule\Form\ApprovalRequiredForm
+    _title: Approval form
+  requirements:
+    _access: 'TRUE'

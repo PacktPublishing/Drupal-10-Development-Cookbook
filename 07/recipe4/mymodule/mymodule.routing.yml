@@ -1,0 +1,7 @@
+mymodule.counter_form:
+  path: /counter-form
+  defaults:
+    _form: Drupal\mymodule\Form\CounterForm
+    _title: Counter form
+  requirements:
+    _access: 'TRUE'

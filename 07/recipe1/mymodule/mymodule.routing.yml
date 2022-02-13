@@ -1,0 +1,7 @@
+mymodule.company_form:
+  path: /company-form
+  defaults:
+    _form: Drupal\mymodule\Form\CompanyForm
+    _title: Company form
+  requirements:
+    _access: 'TRUE'
