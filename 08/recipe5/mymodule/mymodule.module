@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_page_top().
+ */
+function mymodule_page_top() {
+  $request = \Drupal::request();
+  /** @var \Drupal\mymodule\GeoLocatorManager $manager */
+  $manager = \Drupal::service('plugin.manager.geolocator');
+  foreach ($manager->getDefinitions() as $plugin_id => $definition) {
+    /** @var \Drupal\mymodule\Plugin\GeoLocator\GeoLocatorInterface */
+    $instance = $manager->createInstance($plugin_id);
+    $country_code = $instance->geolocate($request);
+    if ($country_code) {
+      \Drupal::messenger()->addStatus("Country: $country_code");
+      break;
+    }
+  }
+}
