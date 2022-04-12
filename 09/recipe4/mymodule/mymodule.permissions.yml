@@ -1,0 +1,4 @@
+administer message:
+  title: 'Administer messages'
+administer message_types:
+  title: 'Administer message types'

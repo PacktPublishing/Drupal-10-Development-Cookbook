@@ -1,0 +1,14 @@
+# Schema for the configuration files of the Site Announcement.
+mymodule.announcement.*:
+type: config_entity
+label: 'Announcement'
+mapping:
+  id:
+    type: string
+    label: 'ID'
+  label:
+    type: label
+    label: 'Label'
+  message:
+    type: text
+    label: 'Text'

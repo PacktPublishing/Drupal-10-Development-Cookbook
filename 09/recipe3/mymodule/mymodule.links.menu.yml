@@ -1,0 +1,5 @@
+mymodule.messages:
+  title: 'Messages'
+  parent: system.admin_structure
+  description: 'Manage messages.'
+  route_name: entity.message.collection

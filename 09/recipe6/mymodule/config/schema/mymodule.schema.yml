@@ -1,0 +1,10 @@
+mymodule.message_type.*:
+  type: config_entity
+  label: 'Message type settings'
+  mapping:
+    id:
+      type: string
+      label: 'Machine-readable name'
+    label:
+      type: label
+      label: 'Label'

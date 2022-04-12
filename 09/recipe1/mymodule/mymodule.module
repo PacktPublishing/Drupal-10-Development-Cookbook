@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_entity_bundle_info_alter().
+ */
+function mymodule_entity_bundle_info_alter(&$bundles) {
+  $bundles['node']['article']['class'] = Drupal\mymodule\Entity\Article::class;
+}
