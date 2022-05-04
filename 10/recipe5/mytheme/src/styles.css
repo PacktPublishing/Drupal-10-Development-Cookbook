@@ -1,0 +1,7 @@
+:root {
+  --text-color: rgb(43, 43, 43);
+}
+
+body {
+  color: var(--text-color);
+}

@@ -1,0 +1,28 @@
+name: 'My theme'
+type: theme
+'base theme': stable9
+starterkit: true
+libraries:
+  - mytheme/base
+  - mytheme/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - mytheme/user
+  core/drupal.dropbutton:
+    - mytheme/dropbutton
+  core/drupal.dialog:
+    - mytheme/dialog
+  file/drupal.file:
+    - mytheme/file
+  core/drupal.progress:
+    - mytheme/progress
+  media/media_embed_ckeditor_theme:
+    - mytheme/media_embed_ckeditor_theme
+  media_library/view:
+    - mytheme/media_library
+  media_library/widget:
+    - mytheme/media_library
+ckeditor_stylesheets:
+  - css/components/media-embed-error.css
+core_version_requirement: ^10

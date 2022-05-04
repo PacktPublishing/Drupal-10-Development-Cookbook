@@ -1,0 +1,9 @@
+:root {
+  --primary-color: rgb(43, 43, 43);
+}
+
+body {
+  background-color: cornflowerblue;
+  background-color: var(--primary-color);
+}
+
