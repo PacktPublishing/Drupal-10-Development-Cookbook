@@ -1,0 +1,4 @@
+curl \
+  --header 'Accept: application/vnd.api+json' \
+  --url "https://localhost/jsonapi/node/page?filter[title][operator]=CONTAINS&filter[title][value]=Test&fields[node--page]=title" \
+  --globoff

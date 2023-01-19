@@ -1,0 +1,5 @@
+curl \
+  --user chapter12:chapter12 \
+  --header 'Accept: application/vnd.api+json' \
+  --header 'Content-type: application/vnd.api+json' \
+  --request DELETE 'https://localhost/jsonapi/node/article/1ddf244d-e8e6-40f5-be48-23bc8fa0fa3e'

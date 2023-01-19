@@ -1,0 +1,34 @@
+curl \
+    --user chapter12:chapter12 \
+    --header 'Accept: application/vnd.api+json' \
+    --header 'Content-type: application/vnd.api+json' \
+    --request PATCH 'https://localhost/jsonapi/node/article/1ddf244d-e8e6-40f5-be48-23bc8fa0fa3e' \
+    --data-binary '{
+  "data": {
+    "type": "node--article",
+    "id": "1ddf244d-e8e6-40f5-be48-23bc8fa0fa3e",
+    "attributes": {
+      "title": "Using Drupal 10 PATCH & JSON:API by Johnny
+        Editor",
+      "body": {
+        "value": "This is how you use Drupal 10 PATCH &
+          JSON:API.",
+        "format": "plain_text"
+      }
+    },
+    "relationships": {
+      "field_tags": {
+        "data": [
+          {
+            "type": "taxonomy_term--tags",
+            "id": "4ef201ed-7cb6-49e5-b125-4c2709be1a42"
+          },
+          {
+            "type": "taxonomy_term--tags",
+            "id": "09504010-8eff-4be0-8205-607f9e74ffa1"
+          }
+       ]
+      }
+    }
+  }
+}'
