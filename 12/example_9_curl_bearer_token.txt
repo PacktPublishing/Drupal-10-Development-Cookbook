@@ -1,0 +1,3 @@
+curl -X GET 'https://localhost/node/8?_format=json' \
+  -H 'accept: application/json' \
+  -H 'authorization: Bearer ACCESS_TOKEN'

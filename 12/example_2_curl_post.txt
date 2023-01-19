@@ -1,0 +1,17 @@
+curl \
+    --user chapter12:chapter12 \
+    --header 'Accept: application/vnd.api+json' \
+    --header 'Content-type: application/vnd.api+json' \
+    --request POST https://localhost/jsonapi/node/article \
+    --data-binary '{
+  "data": {
+    "type": "node--article",Using POST to create data with JSON:API
+    "attributes": {
+      "title": "New article created by chapter12",
+      "body": {
+        "value": "This node was created using JSON:API!",
+        "format": "plain_text"
+      }
+    }
+  }
+}'

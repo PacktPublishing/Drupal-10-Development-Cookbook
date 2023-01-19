@@ -1,0 +1,18 @@
+curl \
+    --user chapter12:chapter12 \
+    --header 'Accept: application/vnd.api+json' \
+    --header 'Content-type: application/vnd.api+json' \
+    --request PATCH 'https://localhost/jsonapi/node/article/1ddf244d-e8e6-40f5-be48-23bc8fa0fa3e' \
+    --data-binary '{
+  "data": {
+    "type": "node--article",
+    "id": "1ddf244d-e8e6-40f5-be48-23bc8fa0fa3e",
+    "attributes": {
+      "title": "Article updated by chapter12",
+      "body": {
+        "value": "This node was updated using JSON:API!",
+        "format": "plain_text"
+      }
+    }
+  }
+}'
