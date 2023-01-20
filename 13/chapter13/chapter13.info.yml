@@ -2,4 +2,4 @@ name: Chapter 13
 type: module
 description: Test examples and code for chapter 13.
 package: Custom
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10

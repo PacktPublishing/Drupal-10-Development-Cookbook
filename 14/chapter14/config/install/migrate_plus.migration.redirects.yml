@@ -1,0 +1,23 @@
+id: redirects
+migration_tags: {}
+migration_dependencies: {}
+migration_group: default
+label: Redirects
+source:
+  plugin: csv
+  path: data/redirects.csv
+  ids: [id]
+  constants:
+    uid: 1
+    status: 301
+destination:
+  plugin: 'entity:redirect'
+process:
+  redirect_source: old_path
+  redirect_redirect: new_path
+  uid: constants/uid
+  status_code: constants/status
+dependencies:
+  enforced:
+    module:
+      - chapter14

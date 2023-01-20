@@ -1,0 +1,7 @@
+name: Chapter 14
+type: module
+description: Content migration examples for chapter 14 of Drupal 10 Development Cookbook.
+core_version_requirement: ^10
+dependencies:
+  - drupal:migrate_plus
+  - drupal:migrate_tools
