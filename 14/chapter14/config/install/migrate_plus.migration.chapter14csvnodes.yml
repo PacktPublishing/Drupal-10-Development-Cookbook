@@ -1,0 +1,28 @@
+id: chapter14csvnodes
+migration_tags: {}
+migration_dependencies: {}
+migration_group: default
+label: Old website articles.
+source:
+  plugin: csv
+  path: /data/articles.csv
+  ids: [id]
+  constants:
+    uid: 1
+destination:
+  plugin: 'entity:node'
+  default_bundle: article
+process:
+  title: old_title
+  body/value: old_body
+  body/format:
+    plugin: default_value
+    default_value: full_html
+  uid: constants/uid
+  field_one: old_field_one
+  field_two: old_field_two
+  created:
+    plugin: format_date
+    from_format: 'Y-m-d\TH:i:sP'
+    to_format: 'U'
+    source: created_date

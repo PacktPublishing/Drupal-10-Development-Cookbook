@@ -1,0 +1,48 @@
+id: chapter14httpjson
+label: Migrates external API data.
+migration_tags: {}
+migration_dependencies: {}
+migration_group: default 
+source:
+  plugin: url
+  urls:
+    - 'http://example.com/api/v1/content'
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  item_selector: data
+  fields:
+      -
+        name: id
+        label: 'ID'
+        selector: id
+  
+      -
+        name:  title
+        label: 'Title'
+        selector: title
+  
+      -
+        name: body
+        label: 'Body content'
+        selector: body
+  
+      -
+        name: archived
+        label: 'Archived status'
+        selector: archived
+  ids:
+    id:
+      type: integer
+destination:
+  plugin: entity:node
+  default_bundle: article
+process:
+  title: title
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: basic_html
+  status: archived
+  uid:
+    plugin: default_value
+    default_value: 1

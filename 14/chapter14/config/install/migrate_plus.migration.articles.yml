@@ -1,0 +1,26 @@
+id: articles
+label: Migrates articles from the legacy database.
+migration_tags: { }
+migration_dependencies: { }
+source:
+  plugin: legacy_articles
+  key: migrate
+destination:
+  plugin: entity:node
+  default_bundle: article
+process:
+  title: title
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: basic_html
+  status: is_published
+  created: published_on
+  field_metatags:
+    - plugin: set_no_index
+      source: no_index
+    - plugin: callback
+      callable: serialize
+  uid:
+    plugin: default_value
+    default_value: 1
