@@ -39,7 +39,7 @@ With the following software and hardware list you can run all code files present
 ### Software and Hardware List
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
-| 1 | A local web server running in Docker (DDEV, Lando, Docksal, | Windows, Mac OS X, and Linux (Any) |
+| 1 | A local web server running in Docker (DDEV, Lando, Docksal) | Windows, Mac OS X, and Linux (Any) |
 | 1 | PhpStorm or VS Code for code editing | Windows, Mac OS X, and Linux (Any) |
 | 1 | Terminal, iTerm, or a similar command-line tool | Windows, Mac OS X, and Linux (Any) |
 | 10 | NodeJS, npm, and Laravel Mix | Windows, Mac OS X, and Linux (Any) |
