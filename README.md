@@ -61,3 +61,8 @@ is an open source developer who has been working with Drupal since 2013. Since t
 
 
 
+
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781803234960">https://packt.link/free-ebook/9781803234960 </a> </p>
