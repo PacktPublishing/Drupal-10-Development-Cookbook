@@ -35,7 +35,7 @@ class RequestSubscriber implements EventSubscriberInterface {
     */
   public static function getSubscribedEvents() {
     return [
-      RequestEvent::class => ['doAnonymousRedirect', 28],
+      KernelEvents::REQUEST => ['doAnonymousRedirect', 28],
     ];
   }
 
