@@ -51,6 +51,10 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * Drupal 9 Module Development - Third Edition  [[Packt]](https://www.packtpub.com/product/drupal-9-module-development-third-edition/9781800204621?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/1800204620)
 
+## Errata
+Page: 28
+
+Under "Improved links" heading, the code snippet should start with "cd" not "dd".
 
 ## Get to Know the Authors
 **Kevin Quillen**
